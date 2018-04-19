@@ -1,0 +1,8 @@
+version: "3.5"
+services:
+  web:
+    build: .
+    env_file: .env
+    volumes:
+      - .:/cron
+    command: ["/cron/script.sh"]
