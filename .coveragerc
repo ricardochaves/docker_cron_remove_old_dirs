@@ -2,3 +2,10 @@
 show_missing = True
 exclude_lines =
     if __name__ == .__main__.:
+
+omit =
+    */python?.?/*
+    */nose/*
+    *__init__*
+    */home/*
+    */opt/*
