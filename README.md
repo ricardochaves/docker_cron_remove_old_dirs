@@ -2,7 +2,11 @@
 
 [![Build Status](https://travis-ci.org/ricardochaves/docker_cron_remove_old_dirs.svg?branch=master)](https://travis-ci.org/ricardochaves/docker_cron_remove_old_dirs)
 
-[![Coverage Status](https://coveralls.io/repos/github/ricardochaves/docker_cron_remove_old_dirs/badge.svg?branch=master)](https://coveralls.io/github/ricardochaves/docker_cron_remove_old_dirs?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/ricardochaves/docker_cron_remove_old_dirs/badge.svg)](https://coveralls.io/github/ricardochaves/docker_cron_remove_old_dirs)
+
+[![](https://images.microbadger.com/badges/version/ricardobchaves6/docker-cron-remove-dirs.svg)](https://microbadger.com/images/ricardobchaves6/docker-cron-remove-dirs "Get your own version badge on microbadger.com")
+
+[![](https://images.microbadger.com/badges/image/ricardobchaves6/docker-cron-remove-dirs.svg)](https://microbadger.com/images/ricardobchaves6/docker-cron-remove-dirs "Get your own image badge on microbadger.com")
 
 Monitor multiple directories and remove all directories older than X times.
 
