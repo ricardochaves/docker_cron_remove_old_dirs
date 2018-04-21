@@ -2,7 +2,11 @@ version: "3.5"
 services:
   web:
     build: .
-    env_file: .env
+    environment:
+      - SLEEP_TIME_SECONDS=2
+      - TIME_TO_REMOVE_SECONDS=2
     volumes:
       - .:/cron
+      - ./to_watch_1:/watch/to_watch_1
+      - ./to_watch_2:/watch/to_watch_2
     command: ["/cron/script.sh"]
