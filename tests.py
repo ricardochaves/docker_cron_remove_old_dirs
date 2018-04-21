@@ -73,7 +73,7 @@ class TestScript(TestCase):
             Unit: Script: Test is_old()
         """
         shi = MagicMock()
-        shi.shift = MagicMock(return_value = 2)
+        shi.shift = MagicMock(return_value=2)
 
         mock_arrow_now.return_value = shi
         mock_arrow_get.return_value = 1
