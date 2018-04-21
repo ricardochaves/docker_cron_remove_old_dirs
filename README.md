@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/ricardochaves/docker_cron_remove_old_dirs.svg?branch=master)](https://travis-ci.org/ricardochaves/docker_cron_remove_old_dirs)
 
+[![Coverage Status](https://coveralls.io/repos/github/ricardochaves/docker_cron_remove_old_dirs/badge.svg?branch=master)](https://coveralls.io/github/ricardochaves/docker_cron_remove_old_dirs?branch=master)
+
 Monitor multiple directories and remove all directories older than X times.
 
 ## How to use
