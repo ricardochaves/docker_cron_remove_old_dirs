@@ -3,3 +3,4 @@ coverage
 nose
 nose-watch
 python-coveralls
+coveralls
