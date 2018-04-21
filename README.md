@@ -1,5 +1,7 @@
 # Remove Old Dirs
 
+[![Build Status](https://travis-ci.org/ricardochaves/docker_cron_remove_old_dirs.svg?branch=master)](https://travis-ci.org/ricardochaves/docker_cron_remove_old_dirs)
+
 Monitor multiple directories and remove all directories older than X times.
 
 ## How to use
