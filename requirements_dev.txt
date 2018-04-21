@@ -1,4 +1,2 @@
 pylint
-coverage
-nose
-nose-watch
+python-coveralls
