@@ -1,2 +1,2 @@
 #!/bin/bash
-python ./cron/script.py
+python ./script.py

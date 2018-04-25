@@ -2,3 +2,4 @@
 .venv
 .coverage
 .vscode
+.pytest_cache

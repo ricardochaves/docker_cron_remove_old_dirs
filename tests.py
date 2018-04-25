@@ -17,6 +17,7 @@ from script import is_old
 from script import work_with_watch
 from script import loop_root
 
+
 class TestScript(TestCase):
     """
         Tests script.py
@@ -49,7 +50,7 @@ class TestScript(TestCase):
 
         mock_arrow_get.assert_called_once_with(entry.stat().st_mtime)
         mock_removetree.assert_called_once_with(entry.path)
-        #mock_log.assert_called_once()
+        # mock_log.assert_called_once()
 
     def test_is_dir(self):
         """
@@ -86,7 +87,6 @@ class TestScript(TestCase):
         mock_arrow_now.assert_called_once_with()
         mock_arrow_get.assert_called_once_with(entry.stat().st_mtime)
 
-
     @patch('script.remove_path')
     @patch('script.is_old')
     @patch('script.is_dir')
@@ -112,7 +112,7 @@ class TestScript(TestCase):
         self.assertTrue(mock_is_dir.call_args_list == expected_calls)
         self.assertTrue(mock_is_old.call_args_list == expected_calls)
 
-        expected_calls = [call(dir1.path), call(dir2.path)]
+        expected_calls = [call(dir1), call(dir2)]
         self.assertTrue(mock_remove_path.call_args_list == expected_calls)
 
     @patch('script.work_with_watch')
@@ -131,6 +131,7 @@ class TestScript(TestCase):
 
         expected_calls = [call(dir1.path), call(dir2.path)]
         self.assertTrue(mock_work.call_args_list == expected_calls)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -9,11 +9,13 @@ import arrow
 
 logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 
+
 def execute():
     """
         Execute loop for all directories
     """
     loop_root()
+
 
 def remove_path(entry):
     """
@@ -24,11 +26,13 @@ def remove_path(entry):
     logging.info('The "%s" directory with creation date %s was removed.',
                  entry.path, itemtime)
 
+
 def is_dir(entry):
     """
         Checks if it's a valid directory
     """
     return not entry.name.startswith('.') and entry.is_dir()
+
 
 def is_old(entry):
     """
@@ -37,6 +41,7 @@ def is_old(entry):
     criticaltime = arrow.now().shift(seconds=-int(os.getenv('TIME_TO_REMOVE_SECONDS')))
     itemtime = arrow.get(entry.stat().st_mtime)
     return itemtime < criticaltime
+
 
 def work_with_watch(path):
     """
@@ -47,7 +52,8 @@ def work_with_watch(path):
         for entry in dirs:
             if is_dir(entry):
                 if is_old(entry):
-                    remove_path(entry.path)
+                    remove_path(entry)
+
 
 def loop_root():
     """
