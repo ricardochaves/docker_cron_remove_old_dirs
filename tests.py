@@ -37,7 +37,6 @@ class TestScript(TestCase):
         mock_loop_root.assert_called_once_with()
 
     @staticmethod
-    #@patch('logging.info')
     @patch('script.shutil.rmtree')
     @patch('script.arrow.get')
     def test_remove_path(mock_arrow_get, mock_removetree):
@@ -50,7 +49,6 @@ class TestScript(TestCase):
 
         mock_arrow_get.assert_called_once_with(entry.stat().st_mtime)
         mock_removetree.assert_called_once_with(entry.path)
-        # mock_log.assert_called_once()
 
     def test_is_dir(self):
         """
