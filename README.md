@@ -18,13 +18,8 @@ services:
       - SLEEP_TIME_SECONDS=2
       - TIME_TO_REMOVE_SECONDS=2
     volumes:
-      - ./to_watch_1:/watch/to_watch_1
-      - ./to_watch_2:/watch/to_watch_2
-    command: ["/cron/script.sh"]
+      - /mydir/cron1:/cron/watch/cron_1
+      - /mydir/cron2:/cron/watch/cron_2
 ```
 
-With the above configuration it will keep looking at everything you have inside ```to_watch_1``` and ``` to_watch_2 ```. Any directory within these two that is older than the configured time will be deleted.
-
-## TODO:
- - Remove command from docker-compose and include in Dockerfile
-
+With the above configuration it will keep looking at everything you have inside ```cron1``` and ```cron2```. Any directory within these two that is older than the configured time will be deleted.
